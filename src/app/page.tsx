@@ -19,16 +19,8 @@ export default async function Home() {
           <div className="flex items-center gap-4 text-sm font-medium">
             {!userId ? (
               <div className="flex items-center gap-2">
-                <SignInButton mode="modal">
-                  <button className="text-navy hover:text-navy/70 transition-colors border border-transparent px-4 py-2 hover:bg-gray-50 rounded-md">
-                    Sign In
-                  </button>
-                </SignInButton>
-                <SignUpButton mode="modal">
-                  <button className="bg-navy text-white hover:bg-navy/90 transition-colors px-4 py-2 rounded-md">
-                    Sign Up
-                  </button>
-                </SignUpButton>
+                <SignInButton mode="modal"><button className="text-navy hover:text-navy/70 transition-colors border border-transparent px-4 py-2 hover:bg-gray-50 rounded-md">Sign In</button></SignInButton>
+                <SignUpButton mode="modal"><button className="bg-navy text-white hover:bg-navy/90 transition-colors px-4 py-2 rounded-md">Sign Up</button></SignUpButton>
               </div>
             ) : (
               <>
