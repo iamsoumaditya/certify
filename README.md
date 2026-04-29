@@ -126,7 +126,7 @@ Open [http://localhost:3000](http://localhost:3000) and enjoy.
 
 | Layer | Technology |
 |---|---|
-| Framework | Next.js 15 (App Router) |
+| Framework | Next.js 16 (App Router) |
 | Auth | Clerk |
 | Database | PostgreSQL + Drizzle ORM |
 | Image Storage | Cloudinary |

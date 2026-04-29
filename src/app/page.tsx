@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { UserButton, SignInButton, SignUpButton } from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 
 export default async function Home() {
@@ -19,8 +19,8 @@ export default async function Home() {
           <div className="flex items-center gap-4 text-sm font-medium">
             {!userId ? (
               <div className="flex items-center gap-2">
-                <SignInButton mode="modal"><button className="text-navy hover:text-navy/70 transition-colors border border-transparent px-4 py-2 hover:bg-gray-50 rounded-md">Sign In</button></SignInButton>
-                <SignUpButton mode="modal"><button className="bg-navy text-white hover:bg-navy/90 transition-colors px-4 py-2 rounded-md">Sign Up</button></SignUpButton>
+                <Link href="/sign-in" className="text-navy hover:text-navy/70 transition-colors border border-transparent px-4 py-2 hover:bg-gray-50 rounded-md">Sign In</Link>
+                <Link href="/sign-up" className="bg-navy text-white hover:bg-navy/90 transition-colors px-4 py-2 rounded-md">Sign Up</Link>
               </div>
             ) : (
               <>
@@ -49,8 +49,8 @@ export default async function Home() {
           <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
             {!userId ? (
               <>
-                <SignUpButton mode="modal"><button className="bg-gold hover:bg-[#a68800] text-navy font-semibold px-8 py-4 rounded-md transition-colors text-lg flex items-center justify-center gap-2 shadow-sm">Get Certified &rarr;</button></SignUpButton>
-                <SignInButton mode="modal"><button className="bg-white border-2 border-navy text-navy font-semibold px-8 py-4 rounded-md hover:bg-gray-50 transition-colors text-lg flex items-center justify-center gap-2 shadow-sm">Sign In</button></SignInButton>
+                <Link href="/sign-up" className="bg-gold hover:bg-[#a68800] text-navy font-semibold px-8 py-4 rounded-md transition-colors text-lg flex items-center justify-center gap-2 shadow-sm">Get Certified &rarr;</Link>
+                <Link href="/sign-in" className="bg-white border-2 border-navy text-navy font-semibold px-8 py-4 rounded-md hover:bg-gray-50 transition-colors text-lg flex items-center justify-center gap-2 shadow-sm">Sign In</Link>
               </>
             ) : (
               <Link href="/dashboard" className="bg-navy hover:bg-navy/90 text-white font-semibold px-8 py-4 rounded-md transition-colors text-lg flex items-center gap-2 inline-flex shadow-sm">

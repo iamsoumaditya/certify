@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const ebGaramond = EB_Garamond({ subsets: ["latin"], variable: "--font-eb-garamond" });
 
 export const metadata: Metadata = {
-  title: "Certify — Udemy Style Certificate Generator",
+  title: "Certify — A mock Certificate Generator",
   description: "Generate mock certificates for fun",
 };
 
