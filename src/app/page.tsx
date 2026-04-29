@@ -92,7 +92,7 @@ export default async function Home() {
               <div className="text-3xl mb-4">🔗</div>
               <h3 className="font-bold text-navy text-lg mb-3">Permanent Link</h3>
               <p className="text-gray-500 leading-relaxed text-sm">
-                Every certificate gets its own URL at Certify.com/certificate/UC-xxxxx. Share it. Frame it. Put it on LinkedIn. We dare you.
+                Every certificate gets its own URL at getcertified.tech/certificate/UC-xxxxx. Share it. Frame it. Put it on LinkedIn. We dare you.
               </p>
             </div>
           </div>
