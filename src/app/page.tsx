@@ -24,6 +24,9 @@ export default async function Home() {
               </div>
             ) : (
               <>
+                <Link href="/certificates" className="text-navy hover:text-navy/70 transition-colors mr-2">
+                  My Certificates
+                </Link>
                 <Link href="/dashboard" className="text-navy hover:text-navy/70 transition-colors mr-2">
                   Dashboard
                 </Link>

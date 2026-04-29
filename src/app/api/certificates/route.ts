@@ -74,7 +74,7 @@ export async function GET() {
       .where(eq(certificates.userId, dbUser.id))
       .orderBy(desc(certificates.createdAt));
 
-    return Response.json({ certificates: userCerts });
+    return Response.json({ certificates: userCerts, userUuid: dbUser.id });
   } catch (error) {
     console.error("Failed to fetch certificates:", error);
     return new Response("Internal Server Error", { status: 500 });

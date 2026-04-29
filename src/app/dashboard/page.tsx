@@ -23,6 +23,7 @@ export default function Dashboard() {
   const [studentName, setStudentName] = useState("");
   const [captureMeta, setCaptureMeta] = useState<{ uuid: string; referenceNo: string } | null>(null);
   const [previewReferenceNo, setPreviewReferenceNo] = useState("0001");
+  const [userUuid, setUserUuid] = useState("");
   
   const [isGenerating, setIsGenerating] = useState(false);
   const captureRef = useRef<HTMLDivElement>(null);
@@ -49,11 +50,12 @@ export default function Dashboard() {
           throw new Error("Failed to fetch certificates");
         }
 
-        const data: { certificates: Array<unknown> } = await res.json();
+        const data: { certificates: Array<unknown>; userUuid: string } = await res.json();
         const nextRefNo = String(data.certificates.length + 1).padStart(4, "0");
 
         if (!cancelled) {
           setPreviewReferenceNo(nextRefNo);
+          setUserUuid(data.userUuid);
         }
       } catch (error) {
         console.error("Failed to load preview reference number:", error);
@@ -288,7 +290,7 @@ export default function Dashboard() {
                   instructorName={instructorName || "Instructor"}
                   completionDate={completionDate || "Date"}
                   courseLength={courseLength || "Hours"}
-                  uuid=""
+                  uuid={userUuid}
                   referenceNo={previewReferenceNo}
                 />
               </div>

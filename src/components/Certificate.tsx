@@ -48,7 +48,7 @@ export const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
     },
     ref
   ) => {
-    const certificateNumber = uuid ? `UC-${uuid}` : "UC-770bc9a4-d5c0-4b0c-9819-31a4dd3d2a33";
+    const certificateNumber = uuid ? `UC-${uuid}` : "UC-880bc6a4-f9k0-9h0x-1810-36x4dd2d2b44";
     const certificateUrl = `ude.my/${certificateNumber}`;
     const displayReferenceNo = formatReferenceNo(referenceNo);
     const displayDate = formatCompletionDate(completionDate);
