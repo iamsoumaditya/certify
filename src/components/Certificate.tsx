@@ -127,12 +127,17 @@ export const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
             top: "388px",
             left: "96px",
             maxWidth: "1360px",
-            fontSize: "90px",
+            fontSize: courseName.length > 60 ? "65px" : "90px",
             lineHeight: 1.03,
             fontWeight: 800,
             letterSpacing: 0,
             color: "#191a21",
             wordBreak: "break-word",
+            display: "-webkit-box",
+            WebkitLineClamp: courseName.length > 60 ? 3 : 2,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+            maxHeight: "210px"
           }}
         >
           {courseName}
