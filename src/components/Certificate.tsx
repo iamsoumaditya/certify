@@ -133,11 +133,6 @@ export const Certificate = forwardRef<HTMLDivElement, CertificateProps>(
             letterSpacing: 0,
             color: "#191a21",
             wordBreak: "break-word",
-            display: "-webkit-box",
-            WebkitLineClamp: courseName.length > 60 ? 3 : 2,
-            WebkitBoxOrient: "vertical",
-            overflow: "hidden",
-            maxHeight: "210px"
           }}
         >
           {courseName}
